@@ -74,20 +74,34 @@ nav h2 span {
 
 .content {
   padding: 5%;
-  display: inline-block;
+  display: inline-flex;
+}
+
+.content-text{
+  width: 65%;
 }
 
 .content h1 {
   font-size: 3rem;
-  width: 65%;
+  text-align: center;
 }
 
 .content p {
   font-size: 1.5rem;
-  width: 65%;
+}
+
+.content-picture {
+  width: 35%;
+  display: inline-block;
+  align-items: center;
 }
 
 #duck {
-  width: 35%;
+  width: 85%;
   height: auto;
+}
+
+.content-picture .caption {
+  font-size: 1rem;
+  font-style: italic;
 }
