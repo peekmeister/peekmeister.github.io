@@ -69,7 +69,7 @@ nav h2 span {
   background-color: rgba(183, 182, 173, 0.75);
   font-size: 4rem;
   color: rgb(247, 245, 196);
-  padding: 0 .5rem;
+  padding: 0 .5rem .5rem .5rem;
 }
 
 .content {
