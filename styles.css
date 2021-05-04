@@ -166,6 +166,16 @@ nav h2 span {
 }
 
 @media only screen and (max-width: 600px) {
+  .menu-bar {
+    font-size: .75rem;
+  }
+  nav h1 span {
+    font-size: 3rem;
+  }
+
+  nav h2 span {
+    font-size: 2rem;
+  }
   .bgimg {
     background-size: contain;
   }
