@@ -164,3 +164,9 @@ nav h2 span {
 .social li a {
   font-size: .75rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .bgimg {
+    background-size: contain;
+  }
+}
