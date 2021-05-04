@@ -16,17 +16,56 @@
   background-color: white;
 }
 
+
+
+
+
 nav {
   height: 500px;
-  background-image: url(resources/canoe.jpg);
-  background-position: center center;
+  width: 100%;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
+#home {
+  background-image: url(resources/canoe.jpg);
+}
+
+#podcast {
+  background-image: url(resources/microphone.jpg);
+  background-position: center center;
+}
+
+#computer {
+  background-image: url(resources/computer.png);
+  background-position: bottom center;
+  background-size: cover;
+}
+
+#music {
+  background-image: url(resources/jazz.jpg);
+  background-position: top center;
+}
+
+#film {
+  background-image: url(resources/film.jpg);
+  background-position: center right;
+}
+
 .menu-bar {
+  width: 100%;
   list-style: none;
   height: 5%;
-background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+}
+
+#menu-bar {
+  background-color: rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+
 }
 
 .menu-bar li {
@@ -34,7 +73,7 @@ background-color: rgba(255, 255, 255, 0);
   padding: 0 2.5%;
   margin: 0;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 li a {
@@ -68,8 +107,20 @@ nav h2 span {
   font-family: 'Cookie';
   background-color: rgba(183, 182, 173, 0.75);
   font-size: 4rem;
-  color: rgb(247, 245, 196);
+  color: rgb(246, 241, 141);
   padding: 0 .5rem .5rem .5rem;
+}
+
+#programs{
+  background-color: rgba(121, 15, 15, 0.5);
+  color: rgb(76, 214, 94);
+}
+
+#pod_title {
+  color: rgb(235, 40, 40);
+}
+#pod_sub {
+  color: rgb(224, 76, 76)
 }
 
 .content {
@@ -97,6 +148,9 @@ nav h2 span {
 }
 
 #duck {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 85%;
   height: auto;
 }
@@ -104,4 +158,13 @@ nav h2 span {
 .content-picture .caption {
   font-size: 1rem;
   font-style: italic;
+  text-align: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  font-size: .75rem;
 }
