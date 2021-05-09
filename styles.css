@@ -30,7 +30,7 @@ nav {
 }
 
 #podcast {
-  background-image: url(resources/microphone.jpg);
+  background-image: url(resources/canoe.jpg);
   background-position: center center;
 }
 
@@ -61,7 +61,6 @@ nav {
 #menu-bar {
   background-color: rgba(255,255,255,0.4);
   padding-bottom: 2px;
-
 }
 
 .menu-bar li {
@@ -157,6 +156,24 @@ nav h2 span {
   text-align: center;
 }
 
+.review {
+  padding: 5rem 3rem;
+  display: inline-block;
+}
+
+.review-text {
+  width: 75%;
+}
+
+.movie-pic {
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+}
+
 .social li {
   list-style: none;
 }
@@ -166,8 +183,14 @@ nav h2 span {
 }
 
 @media only screen and (max-width: 600px) {
-  .menu-bar {
-    font-size: .75rem;
+  #menu-bar {
+    width: 100%;
+  }
+  #menu-bar a{
+    font-size: 1rem;
+  }
+  nav {
+    height: 250px;
   }
   nav h1 span {
     font-size: 3rem;
@@ -178,5 +201,7 @@ nav h2 span {
   }
   .bgimg {
     background-size: contain;
+    background-position: 0% 0%;
+    background-origin: border-box;
   }
 }
