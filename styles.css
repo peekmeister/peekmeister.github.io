@@ -166,7 +166,7 @@ nav h2 span {
   text-align: center;
 }
 
-.review {
+div.review {
   margin: 5rem 2.5%;
   display: flex;
   width: 95%;
