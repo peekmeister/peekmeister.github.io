@@ -160,7 +160,7 @@ nav h2 span {
   height: auto;
 }
 
-.caption { 
+.caption {
   font-size: 1rem;
   font-style: italic;
   text-align: center;
@@ -181,6 +181,7 @@ div.review {
   width: 75%;
   border-color: black;
   border-width: thick;
+  margin: 2rem;
 }
 
 .review-pic {
