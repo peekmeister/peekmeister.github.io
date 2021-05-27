@@ -168,24 +168,51 @@ nav h2 span {
 
 div.review {
   margin: 5rem 2.5%;
+  background-color: rgb(244, 245, 203);
   display: flex;
   width: 95%;
   align-items: center;
   text-align: center;
   border-style: solid;
-  border-color: black;
+  border-color: rgba(244, 250, 223, .1);
   border-width: thick;
 }
 
 .review-text {
+  background-color: inherit;
   width: 75%;
-  border-color: black;
-  border-width: thick;
+
   margin: 2rem;
 }
 
+.review-text h3, p, em, storng {
+  background-color: inherit;
+}
+
 .review-pic {
+    background-color: inherit;
   width: 50%;
+}
+
+.divider {
+  margin: 5px 5px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider p {
+  font-size: 3rem;
+  font-family: Georgia;
+  justify-content: center;
+  display: flex;
+}
+
+.divider img {
+  width: 5%;
+  height: 5%;
+  display: flex;
 }
 
 .movie-pic {
