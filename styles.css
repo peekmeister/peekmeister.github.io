@@ -13,7 +13,7 @@
   font-family: 'Open Sans', 'Roboto', Georgia, sans-serif;
   font-size: 16px;
   margin: 0;
-  background-color: white;
+  background-color: rgb(252, 253, 225);
 }
 
 nav {
@@ -187,6 +187,18 @@ h4 {
   text-align: center;
 }
 
+.album-recs li, .album-recs a {
+  font-size: 1.25rem;
+}
+
+.album-recs a {
+  color: rgb(214, 0, 0);
+}
+
+.album-recs li {
+  margin-bottom: 2%;
+}
+
 div.review {
   margin: 5rem 2.5%;
   background-color: rgb(244, 245, 203);
@@ -202,16 +214,15 @@ div.review {
 .review-text {
   background-color: inherit;
   width: 75%;
-
   margin: 2rem;
 }
 
-.review-text h3, p, em, storng {
+.review-text h3, .review-text p, .review-text em,.review-text storng {
   background-color: inherit;
 }
 
 .review-pic {
-    background-color: inherit;
+  background-color: inherit;
   width: 50%;
 }
 
@@ -244,23 +255,42 @@ div.review {
   height: auto;
 }
 
-.container {
+footer {
   width: 100%;
+  background-color: rgb(227, 225, 253);
+  /*margin: 2.5% 0;*/
+}
+
+.footer-content {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-left: -10px;
+  padding-bottom: .75rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
+  background-color: rgb(227, 225, 253);
+  border-top: 3px dashed black;
 }
 
-.container p {
+.footer-content p {
   margin-left: 1.25rem;
+  margin-top: .5rem;
+}
+
+.social {
+  background-color: rgb(227, 225, 253);
 }
 
 .social li {
   list-style: none;
+  background-color: rgb(227, 225, 253);
 }
 
-.social li a {
+.social li, .social a {
   font-size: .75rem;
 }
 
