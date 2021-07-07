@@ -148,6 +148,59 @@ nav h2 span {
   text-align: center;
 }
 
+.program-cat{
+  width: 95%;
+  display: block;
+  margin: 1rem 2.5%;
+}
+
+.program-cat h1 {
+  font-size: 3rem;
+  color: rgb(231, 150, 28);
+  text-align: center;
+  font-weight: bold;
+}
+
+.program-name{
+  width:100%;
+  text-decoration: underline;
+  margin-bottom: .5rem;
+}
+
+.program-name h2{
+  font-size: 2rem;
+}
+
+.program-desc {
+  width: 100%;
+  display: flex;
+}
+
+.program-text{
+  width: 100%;
+}
+
+.program-text p {
+  margin-bottom: .5rem;
+  margin-right: 2rem;
+  font-size: 1.25rem;
+}
+
+.program-text a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(201, 2, 62);
+  text-align: center;
+}
+
+#deeplens{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
 h4 {
   font-size: 1.5rem;
   text-align: center;
