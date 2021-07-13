@@ -22,22 +22,49 @@
 		</nav>
 		<div class="program-cat">
 			<h1>AWS Hacks</h1>
-			<div class="program-name">
-				<h2>Attendance Camera</h2>
+			<div class="program-cont">
+				<div class="program-name">
+					<h2>Attendance Camera</h2>
+				</div>
+				<div class="program-desc">
+					<div class="program-text">
+						<p>
+							Buckle up. This is a doozy.
+						</p>
+						<p>
+							This is a project that makes me feel pretty good. Ethically questionable, but ultimately my work did not break any social doctrines or replace any jobs. I got to add on a lot to my experience and found a LOT of it engrossing.
+						</p>
+						<p>
+							For my internship in university, I was given a deep-learning enabled camera - the <a href="https://aws.amazon.com/deeplens/">AWS DeepLens</a> - to create a tool to use facial recognition to take daily attendance.
+							This was a great opportunity to learn about machine learning and A.I., topics that fascinate me and always seemed too big to begin, get web dev experience and start to feel professional. However, the idea of building a tool to make sure everyone is going to class was unsettling.
+						</p>
+
+						<p>
+							Regardless, I learned all about how AWS worked between 10 or so microservices. I used a model that excelled in facial recognition  - using the aptly named Amazon Rekognition - to load onto the camera, along with a little Lambda script telling the camera when to take the photos and where to send it (our specific S3 bucket).
+							While the IoT device was resposible for reliably taking pictures, an additional Lambda script waits for an object to be created in that bucket and figure out who is in the picture. This used the same model from Rekognition to scan the face and compare it to values it had learned previously (of the class) and sends any matches to a Dynanmo database to be marked as present.
+						</p>
+
+						<p>
+							This was the easy part, really. Once I got the camera at least. I wouldn't receive the DeepLens until a few weeks after starting in the position, so a lot of my time was getting familiar with AWS and the key AWS microservices for my project. However, this was only the first component.
+						</p>
+
+						<p>
+							The second - and ultimately damning - part of the project was the website frontend. This tool would assist the Professor in taking attendance, who would have to go in and verify the results, maybe jot some notes on students to review later. This would use a new learning platform to hook up to the current learning platform (which was created by the same guy) to make seemless integration and create a strong LTI tool to promote the new system.
+							So this would be the hub for the professor, so that they can see a history of attendance, make notes, perhaps see grades.
+							AWS used this to send uncertain matches to to have the professor verify who was in the picture and retrain the model bit by bit. I had to learn PHP and a whole lot of web dev to do this and it was a lot of fun! I got really familiar with HTML and CSS as well as using PHP to make the website more programmatic.
+						</p>
+						<p>
+							However, to use the new learning platform and actually test things out, I had to use a public Git repo. There was a lot to learn about connecting AWS to the site and using Amazon SNS to make it work and it was great. But, I ran into a problem updating the database from the website and I had hardcoded the keys into the site.
+						</p>
+						<p>
+							To make a long story short, class research using this tool was nixxed. I did test this tool out within the office, across a wide range of ages, facial accessories and genders and it worked out decently well.
+						</p>
+					</div>
+					<div class="content-picture">
+						<img id="deeplens" src="resources/amazon-deeplens.jpg" alt="Picture of the deep-learning enabled camera, AWS Deeplens">
+						<p class="caption">Image of the AWS DeepLens</p>
+					</div>
 			</div>
-			<div class="program-desc">
-				<div class="program-text">
-				<p>
-					This is a project that makes me feel pretty good. Ethically questionable, but ultimately my work did not break any social doctrines or replace any jobs. I got to add on a lot to my experience and found a LOT of it engrossing.
-				</p>
-				<p>
-					For my internship in university, I was given a deep-learning enabled camera, the <a href="https://aws.amazon.com/deeplens/">AWS DeepLens</a>.
-				</p>
-				</div>
-				<div class="content-picture">
-					<img id="deeplens" src="resources/amazon-deeplens.jpg" alt="Picture of the deep-learning enabled camera, AWS Deeplens">
-					<p class="caption">Image of the AWS DeepLens</p>
-				</div>
 		</div>
 		</div>
 		<footer>

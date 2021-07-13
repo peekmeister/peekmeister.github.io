@@ -161,6 +161,10 @@ nav h2 span {
   font-weight: bold;
 }
 
+div.program-cont, .program-name h2, .program-text p, .program-text, .content-picture, .content-picture p, .program-text a, .program-desc{
+  background-color: rgb(229, 211, 91);
+}
+
 .program-name{
   width:100%;
   text-decoration: underline;
@@ -174,6 +178,7 @@ nav h2 span {
 .program-desc {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .program-text{
@@ -181,7 +186,7 @@ nav h2 span {
 }
 
 .program-text p {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   margin-right: 2rem;
   font-size: 1.25rem;
 }
@@ -270,11 +275,11 @@ div.review {
   margin: 2rem;
 }
 
-.review-text h3, .review-text p, .review-text em,.review-text storng {
+.review-text h3, .review-text p, .review-text em,.review-text storng, .review-pic p {
   background-color: inherit;
 }
 
-.review-pic {
+.review-pic{
   background-color: inherit;
   width: 50%;
 }
