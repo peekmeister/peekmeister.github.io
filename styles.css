@@ -161,8 +161,17 @@ nav h2 span {
   font-weight: bold;
 }
 
-div.program-cont, .program-name h2, .program-text p, .program-text, .content-picture, .content-picture p, .program-text a, .program-desc{
-  background-color: rgb(229, 211, 91);
+#misc-hacks {
+  color: rgb(105, 120, 236);
+}
+
+
+div.program-cont, .program-name h2, .program-text p, .program-text, .program-picture, .program-picture p, .program-text a, .program-desc, .code-sample pre, h3.small-title {
+  background-color: rgb(248, 207, 103);
+}
+
+.program-cont {
+  width: 100%;
 }
 
 .program-name{
@@ -173,16 +182,38 @@ div.program-cont, .program-name h2, .program-text p, .program-text, .content-pic
 
 .program-name h2{
   font-size: 2rem;
+  padding-top: .5rem;
+  padding-left: 1rem;
+}
+
+h3.small-title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.75rem;
+}
+
+.code-sample {
+  width: 35%;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  overflow-x: auto;
+  word-wrap: normal;
 }
 
 .program-desc {
-  width: 100%;
+  width: 95%;
   display: flex;
   align-items: center;
+  padding: .25rem 0 0 2.5rem;
 }
 
 .program-text{
   width: 100%;
+  margin: 1.25%;
 }
 
 .program-text p {

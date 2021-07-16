@@ -57,16 +57,148 @@
 							However, to use the new learning platform and actually test things out, I had to use a public Git repo. There was a lot to learn about connecting AWS to the site and using Amazon SNS to make it work and it was great. But, I ran into a problem updating the database from the website and I had hardcoded the keys into the site.
 						</p>
 						<p>
-							To make a long story short, class research using this tool was nixxed. I did test this tool out within the office, across a wide range of ages, facial accessories and genders and it worked out decently well.
+							To make a long story short, class research using this tool was nixxed. I did test this tool out within the office, across a wide range of ages, facial accessories and genders and it worked out decently well, though not perfect. I learned a lot about AWS and how it worked.
 						</p>
 					</div>
-					<div class="content-picture">
+					<div class="program-picture" id="deeplens">
 						<img id="deeplens" src="resources/amazon-deeplens.jpg" alt="Picture of the deep-learning enabled camera, AWS Deeplens">
 						<p class="caption">Image of the AWS DeepLens</p>
 					</div>
+				</div>
 			</div>
 		</div>
+
+		<div class="program-cat">
+			<h1 id="misc-hacks">Misc. Hacks (the fun ones)</h1>
+			<div class="program-cont">
+				<div class="program-name">
+					<h2>ARM Assembly Hack</h2>
+				</div>
+				<div class="program-desc">
+					<div class="program-text">
+						<p>
+							I'm very proud about this one. Our program focused primarily on high-level languages, so when our Computer Architecture class began teaching us the ARM Assembly language, a lot of us were blindsided, myself included. Luckily, work on this language started as group projects.
+						</p>
+						<p>
+							My group was a great group of brilliant guys, in many ways I felt like the weakest member of the group. Luckily, we were all on the same page here and had trouble implementing the arithmetic functions, working with a limited number of registers to read and write data to and from, but we eventually got it. And, what do you know, our lynchpin for this project turned out to be me. I don't really know why, but I was able to get into the grove of managing the registers. It was reminiscent of a logic puzzle like the Tower of Hanoi.
+						</p>
+						<p>
+							Anyway, that project went great. The next project was a bit more involved. We had to combine a few different types of programming to apply a filter to an image file and print it out. I did some complicated stuff to do this in ARM and it worked beautifully. However, we could only have groups of 2 and we couldn't just copy the code, so I had to make a SECOND version of the same project that performed the same operation differently that was more straight forward, but took (I think) 3 more clock cycles to complete. So, you know, the first one was the superior hack.
+						</p>
+					</div>
+					<div class="program-picture">
+						<img id="arm_logo" src="resources/arm_logo.jpg" alt="Possible logo of the ARM Assembly Language">
+						<p class="caption">Visualization of ARM Assembly(could not find language logo)</p>
+					</div>
+				</div>
+				<div class="program-desc">
+					<div class="code-sample">
+						<h3 class="small-title">Snippet of the code</h3>
+						<pre>
+							<code>
+@ begins print sequence
+printInit:
+
+		ldr r3,=feature_map_one
+		mov r4,#4
+		mov r2,#0
+		ldr r1,[r3,r2]
+		b print
+
+secondPrint:
+		ldr r4, =string
+		mov r0, #Stdout
+		swi SWI_PrChr
+		cmp r3,r8
+		beq exit
+		ldr r4, =feature_map_two
+		cmp r3,r4
+		beq thirdPrint
+		ldr r3,=feature_map_two
+		mov r4,#4
+		mov r2,#0
+		ldr r1,[r3,r2]
+		b print
+
+thirdPrint:
+		ldr r8, =feature_map_three
+		ldr r3,=feature_map_three
+		mov r4,#4
+		mov r2,#0
+		ldr r1,[r3,r2]
+		b print
+
+offset:
+		add r7,r7,#2
+		b multiply
+
+
+@ PRINT FUNCTION
+print:
+		mov r0, #Stdout
+
+		swi SWI_PrInt                  @ prints out the element
+		add r2,r2,#4
+		ldr r1, [r3, r2]               @ r5 goes to the next elements in the feature map
+		sub r4, r4, #1                 @ decrement r4
+		cmp r4, #0                     @ compares the value of r4 and 0
+		beq secondPrint                @ if r4 != 0, then redoes the print function
+		b print
+
+exit:
+		swi SWI_EXIT
+							</code>
+						</pre>
+					</div>
+					<div class="program-text">
+						<p>
+							Now, Let me try to describe how this worked, regardless of your programming background.
+						</p>
+						<p>
+							It would print out the first of 3 segments. This would be accomplished by making a counter and printing each sub-segment in the segment (a register could only contain so much information at once). Once the counter reaches 0, it will move on to print the second segment, otherwise it loops into itself.
+						</p>
+						<p>
+							When it goes to print the second segment, it checks to see if a "dummy" register has the second segment loaded. It won't, so it will then load that segment into the dummy register and then continue to print that second segment following the same procedure as above.
+						</p>
+						<p>
+							Now when it compares to see if the second segment is loaded into the dummy register, it will recognize that it is does indeed have that segment, so the program will now go to print the THIRD segment instead. There's another leftover register that can be loaded with that third segment and the third segment is printed like the 2 before it.
+						</p>
+						<p>
+							I left something out when describing this algorithm. There's a check between the first dummy register and the leftover register each time to see if they contain the same information. It will often skip since that leftover register will only be containing some integer up to this point, and thus it can continue to print the picture. However, now that they are equal, the algorithm exits entirely.
+						</p>
+						<p>
+							Why did I do this? Honestly, I can't remember what compelled me to do this, it just made sense. It kind of works backwards, since the registers can be "emptied" before running this algorithm, and running it will just load them with information. Similar to the <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi</a>, you can't just start by putting the base on the final rod, it just won't work. You have to work semi-backwards.
+						</p>
+						<p>
+							Now, if that's the efficient way of doing it, how did I create a second algorithm that's a bit worse?
+						</p>
+						<p>
+							It's more simple, but uses some elements of the Tower. The print function just prints. That is its only function. It tells it to print the next segment, not the second segment specifically. There's a separate function to figure out what the next segment is instead of baking that all inside of the second segment and having it fall back into that section.
+						</p>
+						<p>
+							It's nothing super impressive, but I quite like how this project turned out.
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
+
+<!--		<div class="program-cat">
+			<h1 id="misc-hacks">Misc. Hacks (the fun ones)</h1>
+			<div class="program-cont">
+				<div class="program-name">
+				</div>
+				<div class="program-desc">
+					<div class="program-text">
+					</div>
+					<div class="program-picture">
+					<img id="" src="resources/" alt="">
+					<p class="caption"></p>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
 		<footer>
 			<div class="footer-content">
 				<p>Social:</p>
