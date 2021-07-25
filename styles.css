@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Cookie';
     src: url('resources/fonts/Cookie-Regular.woff2') format('woff2'),
@@ -8,6 +9,22 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('resources/fonts/PlayfairDisplaySC-Regular.ttf') format('truetype'),
+      url('resources/fonts/PlayfairDisplaySC-Black.ttf') format('truetype'),
+      url('resources/fonts/PlayfairDisplaySC-BlackItalic.ttf') format('truetype'),
+      url('resources/fonts/PlayfairDisplaySC-BoldItalic.ttf') format('truetype'),
+      url('resources/fonts/PlayfairDisplaySC-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay Bold';
+  src: url('resources/fonts/PlayfairDisplaySC-Bold.ttf') format('truetype');
+}
 
 * {
   font-family: 'Open Sans', 'Roboto', Georgia, sans-serif;
@@ -126,6 +143,62 @@ nav h2 span {
 }
 #pod_sub {
   color: rgb(224, 76, 76)
+}
+
+.spotlight {
+  border-style: solid;
+  border-color: black;
+  border-width: normal;
+  height: auto;
+  width: 75%;
+  background-color: rgba(241, 190, 247, 0.3);
+  margin: 1rem 12.5%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.spotlight-text {
+  width: 100%;
+  display: flex;
+  background-color: rgba(241, 190, 247, 0.3);
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  flex: 2 1 65%;
+}
+
+#spotlight {
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  background-color: rgba(241, 190, 247, 0);
+}
+
+.spotlight-text h4 {
+  font-family: 'PlayfairDisplay Bold';
+  font-weight: bold;
+  background-color: rgba(241, 190, 247, 0);
+}
+
+.spotlight-text button {
+  width: 50%;
+  height: auto;
+  margin: 2%  25%;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(197, 134, 243);
+  background-color: rgb(242, 247, 180);
+}
+
+.spotlight-pic {
+  width: 100%;
+  align-items: flex-end;
+  flex: 1 2 35%;
+}
+
+.spotlight-pic img{
+  width: inherit;
+  display: block;
 }
 
 .content {
