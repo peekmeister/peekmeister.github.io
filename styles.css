@@ -190,6 +190,15 @@ nav h2 span {
   background-color: rgb(242, 247, 180);
 }
 
+.button a{
+  background-color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(197, 134, 243);
+}
+
 .spotlight-pic {
   width: 100%;
   align-items: flex-end;
