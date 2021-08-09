@@ -388,13 +388,39 @@ div.review {
   margin: 2rem;
 }
 
-.review-text h3, .review-text p, .review-text em,.review-text storng, .review-pic p {
+.review-text h3, .review-text p, .review-text em,.review-text storng, .review-pic p, .review-text a, .review-text em {
   background-color: inherit;
 }
 
 .review-pic{
   background-color: inherit;
   width: 50%;
+}
+
+div.review-long {
+  margin: 5rem 2.5%;
+  background-color: rgb(244, 245, 203);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-color: rgba(244, 250, 223, .1);
+  border-width: thick;
+}
+
+div.review-sect {
+  display: inline-flex;
+  background-color: inherit;
+  align-items: center;
+}
+
+.review-long h3 {
+  background-color: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .divider {
