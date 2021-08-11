@@ -49,6 +49,7 @@ nav {
 #podcast {
   background-image: url(resources/microphone.jpg);
   background-position: center center;
+  width: 100%;
 }
 
 #computer {
@@ -248,7 +249,7 @@ nav h2 span {
 }
 
 
-div.program-cont, .program-name h2, .program-text p, .program-text, .program-picture, .program-picture p, .program-text a, .program-desc, .code-sample pre, h3.small-title {
+div.program-cont, .program-name h2, .program-text p, .program-text, .program-picture, .program-picture p, .program-text a, .program-desc, .code-sample pre, h3.small-title, .program-text em {
   background-color: rgb(248, 207, 103);
 }
 
@@ -298,19 +299,23 @@ pre code {
   margin: 1.25%;
 }
 
-.program-text p {
-  margin-bottom: 1rem;
-  margin-right: 2rem;
+.program-text p, a, em {
   font-size: 1.25rem;
 }
 
-.program-text a {
-  font-size: 1.25rem;
+.program-text p {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.program-text a  {
   font-weight: bold;
   text-decoration: none;
   color: rgb(201, 2, 62);
   text-align: center;
 }
+
+
 
 #deeplens{
   display: block;
