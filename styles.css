@@ -215,6 +215,7 @@ nav h2 span {
   padding: 1.5% 5%;
   display: inline-flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .content-text{
@@ -330,8 +331,34 @@ h4 {
   margin-top: 2.5%;
 }
 
+.post {
+  border: 1px solid black;
+  margin: 5% 2.5rem;
+  background-color: rgb(251, 232, 251);
+}
+
+.post h3 {
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.footnote_section, .footnote, .footnote p, a .footnote, .album, .music-pic, .music-pic img, .post sup, .post .content, .post .content-text, .post h3, .post p, .post a, .post strong, .post em, .album-recs, .album-recs ul, .album-recs li {
+  background-color: inherit;
+}
+
 .content p {
   font-size: 1.25rem;
+}
+
+.footnote {
+  font-size: .75rem !important;
+  vertical-align: super;
+}
+
+.footnote_section {
+  border-top: 1px solid black;
 }
 
 .content a {
@@ -346,7 +373,21 @@ h4 {
 
 .album {
   width: 35%;
-  display: inline-block;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-pic {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+#donda_footnote {
+  padding: 2% 0;
+  margin: 0 2.5%;
 }
 
 #duck {
